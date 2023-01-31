@@ -1,0 +1,993 @@
+﻿
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <title>UPDS Tarija</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="upds, tarija, estudiar, universidad, Inscripcion, profesional" />
+    <meta name="description" content="En la UPDS Tarija puedes estudiar una materia por mes con horarios a elección, contamos con docentes especializados y una infraestructura de primer nivel."/>
+    <meta name="author" content="Universidad Privada Domingo Savio Sede Tarija" />
+    <meta name="copyright" content="Universidad Privada Domingo Savio Sede Tarija" />
+    <!-- Favicon -->
+    <link href="~/Content/img/icon/isologo-color-upds_800x800i.png" rel="icon" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Poppins:wght@600;700&display=swap"
+          rel="stylesheet" />
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+          rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+          rel="stylesheet" />
+
+    <!-- Libraries Stylesheet -->
+    <link href="~/Content/lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="~/Content/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Template Stylesheet -->
+    <link href="~/Content/css/style.css" rel="stylesheet" />
+    <link href="~/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+         class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    <!-- Spinner End -->
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-dark text-white-50 py-2 px-0 d-none d-lg-block">
+        <div class="row gx-0 align-items-center">
+            <div class="col-lg-7 px-5 text-start">
+                <div class="h-100 d-inline-flex align-items-center me-4 informacion-cabecera">
+                    <small class="fa fa-phone-alt me-2"></small>
+                    <small>(591-4) 665-8303</small>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center me-4 informacion-cabecera">
+                    <small class="far fa-envelope-open me-2"></small>
+                    <small>infoupds.tarija@upds.edu.bo</small>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center me-4 informacion-cabecera">
+                    <small class="fa fa-map-marker-alt me-2"></small>
+                    <small>Av. Los Sauces, esq. Fabián Ruiz</small>
+                </div>
+            </div>
+            <div class="col-lg-5 px-5 text-end">
+                <div class="h-100 d-inline-flex align-items-center">
+                    <a class="text-white-50 ms-4" target="_blank" href="https://www.facebook.com/universidadprivadadomingosaviotarija">
+                        <i class="fab fa-facebook-f informacion-cabecera"></i>
+                    </a>
+                    <a class="text-white-50 ms-4" target="_blank" href="https://www.instagram.com/upds_tarija/">
+                        <i class="fab fa-instagram informacion-cabecera"></i>
+                    </a>
+                    <a class="text-white-50 ms-4" target="_blank" href="https://www.youtube.com/c/UniversidadPrivadaDomingoSavioUpdsTarija">
+                        <i class="fab fa-youtube informacion-cabecera"></i>
+                    </a>
+                    <a class="text-white-50 ms-4" target="_blank" href="https://api.whatsapp.com/send/?phone=59175111830&text&type=phone_number&app_absent=0">
+                        <i class="fab fa-whatsapp informacion-cabecera"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+    <!-- ======= Header ======= -->
+    <header id="header" class="d-flex align-items-center">
+        <div class="container d-flex align-items-center justify-content-between">
+
+            <h1 class="logo"><img src="~/Content/img/icon/logotipo-upds-azul_800x204.png" /></h1>
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="nav-link scrollto active" href="#Inicio">Inicio</a></li>
+                    <li><a class="nav-link scrollto" href="#Ventajas">Ventajas</a></li>
+                    <li><a class="nav-link scrollto" href="#Carreras">Nuestras Carreras</a></li>
+                    <li><a class="nav-link scrollto" href="#Contactos">Contactos</a></li>
+                    <li><a class="nav-link scrollto" href="#OrgulloUPDS">Orgullo UPDS</a></li>
+                    <li><a class="nav-link scrollto" href="#Testimonios">Testimonios</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+
+        </div>
+    </header>
+    <!-- Inicio Start -->
+    <div id="Inicio" class="container-fluid p-0 mb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="w-100" src="~/Content/img/carrucel/carrucel1.jpg" alt="Image" />
+                    <div class="carousel-caption">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 col-lg-12">
+                                    <h1 class="animated slideInDown titulo-carrucel">
+                                        Tu universidad te espera
+                                    </h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100" src="~/Content/img/carrucel/carrucel2.jpg" alt="Image" />
+                    <div class="carousel-caption">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 col-lg-12">
+                                    <h1 class="animated slideInDown titulo-carrucel">
+                                        La UPDS es para ti
+                                    </h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100" src="~/Content/img/carrucel/carrucel3.jpg" alt="Image" />
+                    <div class="carousel-caption">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 col-lg-12">
+                                    <h1 class="animated slideInDown titulo-carrucel">
+                                        La red universitaria más grande de Bolivia
+                                    </h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#header-carousel"
+                    data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#header-carousel"
+                    data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <!-- Inicio End -->
+    <!-- Ventajas Start -->
+    <div id="Ventajas" class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <h1 class="display-6 mb-5">¿POR QUÉ ESTUDIAR EN LA UPDS?</h1>
+                    <p class="mb-4">
+                        Conoce las principales ventajas que te ofrece la Universidad Privada Domingo Savio.
+                    </p>
+                    <div class="row g-3">
+                        <div class="col-sm-6 wow fadeIn" data-wow-delay="0.1s">
+                            <div class="bg-light rounded h-100 p-3 team-item rounded">
+                                <div class="bg-white d-flex flex-column justify-content-center text-center rounded h-100 py-4 px-3">
+                                    <img class="align-self-center mb-3"
+                                         src="~/Content/img/Ventajas/1 MATERIA.png"
+                                         alt="" />
+                                    <h5 class="mb-2 mt-3">Una materia al mes</h5>
+                                </div>
+                                <div class="team-text text-center bg-white p-4">
+                                    <p class="mt-5 mb-5">Aprovecha tu tiempo en lo que más te guste con nuestro sistema modular donde solo cursas una materia al mes.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 wow fadeIn" data-wow-delay="0.1s">
+                            <div class="bg-light rounded h-100 p-3 team-item rounded">
+                                <div class="bg-white d-flex flex-column justify-content-center text-center rounded h-100 py-4 px-3">
+                                    <img class="align-self-center mb-3"
+                                         src="~/Content/img/Ventajas/HORARIOS.png"
+                                         alt="" />
+                                    <h5 class="mb-2 mt-3">Horarios a elección</h5>
+                                </div>
+                                <div class="team-text text-center bg-white p-4">
+                                    <p class="mt-5 mb-5">Elige el horario que mejor se acomode a ti, porque tus sueños y proyectos son importantes para nosotros, puedes estudiar sin dejar de trabajar al llevar sólo una materia por mes.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 wow fadeIn" data-wow-delay="0.1s">
+                            <div class="bg-light rounded h-100 p-3 team-item rounded">
+                                <div class="bg-white d-flex flex-column justify-content-center text-center rounded h-100 py-4 px-3">
+                                    <img class="align-self-center mb-3"
+                                         src="~/Content/img/Ventajas/DOCENTES.png"
+                                         alt="" />
+                                    <h5 class="mb-0">Docentes especializados</h5>
+                                </div>
+                                <div class="team-text text-center bg-white p-4">
+                                    <p class="mt-5 mb-5">Aprendes de la mano de profesionales más destacados, referentes en su campo de enseñanza para que puedas recibir la mejor formación académica.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 wow fadeIn" data-wow-delay="0.1s">
+                            <div class="bg-light rounded h-100 p-3 team-item rounded">
+                                <div class="bg-white d-flex flex-column justify-content-center text-center rounded h-100 py-4 px-3">
+                                    <img class="align-self-center mb-3"
+                                         src="~/Content/img/Ventajas/INFRAESTRUCTURA.png"
+                                         alt="" />
+                                    <h5 class="mb-0">Infraestructura de calidad</h5>
+                                </div>
+                                <div class="team-text text-center bg-white p-4">
+                                    <p>Busca la formación integral de profesionales adecuándose al contexto social y laboral. Desarrollarás el conocimiento para ser capaz de resolver problemas y tomar decisiones relacionadas a tu campo profesional, laboral y tu proyecto ético de vida.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3"></div>
+                        <div class="col-sm-6 wow fadeIn" data-wow-delay="0.1s">
+                            <div class="bg-light rounded h-100 p-3 team-item rounded">
+                                <div class="bg-white d-flex flex-column justify-content-center text-center rounded h-100 py-4 px-3">
+                                    <img class="align-self-center mb-3"
+                                         src="~/Content/img/Ventajas/CRISCOS.png"
+                                         alt="" />
+                                    <h5 class="mb-0">Intercambios internacionales</h5>
+                                </div>
+                                <div class="team-text text-center bg-white p-4">
+                                    <p class="mt-4 mb-4">La UPDS forma parte de CRISCOS, un programa de Movilidad Estudiantil en el que podrás conocer otro país, experimentar una cultura, costumbres y actividades académicas diferentes de otra universidad.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3"></div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="position-relative rounded overflow-hidden h-100"
+                         style="min-height: 400px">
+                        <img class="position-absolute w-100 h-100"
+                             src="~/Content/img/Ventajas/FER.jpg"
+                             alt=""
+                             style="object-fit: cover" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Ventajas End -->
+    <!-- Carreras Start -->
+    <div id="Carreras" class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto" style="max-width: 500px">
+                <h1 class="display-6 mb-5">
+                    ESCOGE LA CARRERA DE TUS SUEÑOS
+                </h1>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item rounded h-100 p-5">
+                        <div class="text-center">
+                            <img class="img-fluid bg-primary border border-primary rounded border-5 p-2"
+                                 src="~/Content/img/icon/facultades/empresariales.jpg"
+                                 alt=""
+                                 width="95" />
+                            <h4 class="mt-4">Facultad de Ciencias Empresariales</h4>
+                        </div>
+                        <ul class="mt-4 p-0">
+                            <li class=" pb-1 pt-1 border-bottom"><a class="text-decoration-underline" style="cursor:pointer;" data-bs-toggle="modal" data-bs-target="#comercial">Ingeniería Comercial</a></li>
+                            <li class=" pb-1 pt-1 border-bottom"><a class="text-decoration-underline" style="cursor:pointer;" data-bs-toggle="modal" data-bs-target="#empresas">Administración de Empresas</a></li>
+                            <li class=" pb-1 pt-1 border-bottom"><a class="text-decoration-underline" style="cursor:pointer;" data-bs-toggle="modal" data-bs-target="#contaduria">Contaduría Pública</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item rounded h-100 p-5">
+                        <div class="text-center">
+                            <img class="img-fluid bg-primary border border-primary rounded border-5 p-2"
+                                 src="~/Content/img/icon/facultades/ingenieria.jpg"
+                                 alt=""
+                                 width="95" />
+                            <h4 class="mt-4">Facultad de Ingeniería</h4>
+                        </div>
+                        <ul class="mt-4 p-0">
+                            <li class=" pb-1 pt-1 border-bottom"><a class="text-decoration-underline" style="cursor:pointer;" data-bs-toggle="modal" data-bs-target="#sistemas">Ingeniería de Sistemas</a></li>
+                            <li class=" pb-1 pt-1 border-bottom"><a class="text-decoration-underline" style="cursor:pointer;" data-bs-toggle="modal" data-bs-target="#industrial">Ingeniería Industrial</a></li>
+                            <li class=" pb-1 pt-1 border-bottom"><a class="text-decoration-underline" style="cursor:pointer;" data-bs-toggle="modal" data-bs-target="#redes">Ingeniería en Redes y Telecomunicaciones</a></li>
+                            <li class=" pb-1 pt-1 border-bottom"><a class="text-decoration-underline" style="cursor:pointer;" data-bs-toggle="modal" data-bs-target="#ambiental">Ingeniería en Gestión Ambiental</a></li>
+                            <li class=" pb-1 pt-1 border-bottom"><a class="text-decoration-underline" style="cursor:pointer;" data-bs-toggle="modal" data-bs-target="#civil">Ingeniería Civil</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item rounded h-100 p-5">
+                        <div class="text-center">
+                            <img class="img-fluid bg-primary border border-primary rounded border-5 p-2"
+                                 src="~/Content/img/icon/facultades/juridiacas.jpg"
+                                 alt=""
+                                 width="95" />
+                            <h4 class="mt-4">Facultad de Ciencias Sociales y Jurídicas</h4>
+                        </div>
+                        <ul class="mt-4 p-0">
+                            <li class=" pb-1 pt-1 border-bottom"><a class="text-decoration-underline" style="cursor:pointer;" data-bs-toggle="modal" data-bs-target="#psicologia">Psicología</a></li>
+                            <li class=" pb-1 pt-1 border-bottom"><a class="text-decoration-underline" style="cursor:pointer;" data-bs-toggle="modal" data-bs-target="#comunicacion">Ciencias de la Comunicación Social</a></li>
+                            <li class=" pb-1 pt-1 border-bottom"><a class="text-decoration-underline" style="cursor:pointer;" data-bs-toggle="modal" data-bs-target="#derecho">Derecho</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Carreras End -->
+    <!-- About Start -->
+    <div id="" class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="position-relative overflow-hidden rounded ps-5 pt-5 h-100"
+                         style="min-height: 400px">
+                        <img class="position-absolute w-100 h-100"
+                             src="~/Content/img/carreras.jpg"
+                             alt=""
+                             style="object-fit: cover" />
+                        <div class="position-absolute top-0 start-0 bg-white rounded pe-3 pb-3"
+                             style="width: 200px; height: 200px">
+                            <div class="d-flex flex-column justify-content-center text-center bg-primary rounded h-100 p-3">
+                                <h1 class="text-white mb-0">22</h1>
+                                <h5 class="text-white">años</h5>
+                                <h5 class="text-white mb-0">formando profesionales</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="h-100">
+                        <h1 class="display-6 mb-5">
+                            Un plan de estudio que se adecua a tus necesidades, proyectos y sueños.
+                        </h1>
+                        <p class="fs-5 text-primary mb-4">
+                            Registra tu plaza para comenzar tu carrera y convertirte en un profesional más humano.
+                        </p>
+                        @*<div class="row g-4 mb-4">
+                            <div class="col-sm-12">
+                                <div class="d-flex align-items-center">
+                                    <h5 class="mb-0">Registra tu plaza para comenzar tu carrera y convertirte en un profesional más humano.</h5>
+                                </div>
+                            </div>
+                        </div>*@
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+    <!-- Contactos Start -->
+    <div id="Contactos" class="container-fluid appointment my-5 py-5 wow fadeIn"
+         data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-sm-12 wow fadeIn" data-wow-delay="0.3s">
+                    <h1 class="display-6 text-white text-center">
+                        Contactos
+                    </h1>
+                </div>
+                <div class="col-sm-6 wow fadeIn" data-wow-delay="0.3s">
+                    <div class="text-center text-white border rounded p-2">
+                        <div class="iconos-contactos mt-1">
+                            <i class="fa fa-map-marker-alt"></i>
+                        </div>
+                        <div class="mt-2 mb-1">
+                            <h5 class="m-0 text-white">Nuestra dirección</h5>
+                            <p class="m-0">Av. Los Sauces, esq. Fabián Ruiz</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 wow fadeIn" data-wow-delay="0.3s">
+                    <div class="text-center text-white border rounded p-2">
+                        <div class="iconos-contactos mt-1">
+                            <i class="fa fa-envelope"></i>
+                        </div>
+                        <div class="mt-2 mb-1">
+                            <h5 class="m-0 text-white">Envíenos un correo</h5>
+                            <p class="m-0">infoupds.tarija@upds.edu.bo</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 wow fadeIn" data-wow-delay="0.3s">
+                    <div class="text-center text-white border rounded p-2">
+                        <div class="iconos-contactos mt-1">
+                            <a class="icono-contactos-informacion" target="_blank" href="https://api.whatsapp.com/send/?phone=59175111830&text&type=phone_number&app_absent=0"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                        <div class="mt-2 mb-1">
+                            <h5 class="m-0 text-white">WhatsApp</h5>
+                            <p class="m-0">+591 75111830</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.3s">
+                    <iframe class="mb-4 mb-lg-0 rounded" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3711.2496810639977!2d-64.74400988255616!3d-21.5370903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x940647dfb7a7d803%3A0x9c955b696d54271a!2sUniversidad%20Privada%20Domingo%20Savio!5e0!3m2!1ses!2sbo!4v1653604911975!5m2!1ses!2sbo" frameborder="0" style="border:0; width: 100%; height: 435px;" allowfullscreen=""></iframe>
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="bg-white rounded p-4">
+                        <p class="text-center fw-bold">¡Déjanos tus datos para contactarte!</p>
+                        <div class="row g-3">
+                            <div class="col-sm-12">
+                                <div class="form-floating">
+                                    <input type="text"
+                                           class="form-control"
+                                           id="nombre"
+                                           placeholder="Nombre" />
+                                    <label for="gname">Nombre</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-7">
+                                <div class="form-floating">
+                                    <input type="email"
+                                           class="form-control"
+                                           id="correo"
+                                           placeholder="Correo" />
+                                    <label for="gmail">Correo</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-5">
+                                <div class="form-floating">
+                                    <input type="text"
+                                           class="form-control"
+                                           id="celular"
+                                           placeholder="Celular" />
+                                    <label for="cname">Celular</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <textarea class="form-control"
+                                              placeholder="Escriba su mensaje"
+                                              id="mensaje"
+                                              style="height: 100px"
+                                              onkeyup="ContarCaracteres($(this).val(), $(this))"
+                                              maxlength="700"></textarea>
+                                    <label for="message">Mensaje</label>
+                                </div>
+                                <p id="caracteresDisponibles" class="text-left m-0 p-0">700 / 700</p>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary py-3 px-5" onclick="EnviarMensaje()">
+                                    Enviar Mensaje
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contactos End -->
+    <!-- OrgulloUPDS Start -->
+    <div id="OrgulloUPDS" class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto" style="max-width: 500px">
+                <h1 class="display-6 mb-5">Conoce nuestro #OrgulloUPDS</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item rounded">
+                        <img class="img-fluid" src="~/Content/img/orgullo/FEER.jpg" alt="" />
+                        <div class="text-center p-4">
+                            <h5>Lic. Fernanda Flores Gallardo</h5>
+                            <span>“Es decisión de cada uno construir un futuro exitoso, es fácil llegar, el reto es mantenerse”</span>
+                        </div>
+                        <div class="team-text text-center bg-white p-4">
+                            <div class="d-flex justify-content-center">
+                                <p>Graduada por Excelencia Académica de la carrera de Derecho, mejor estudiante de la Universidad, Facultad y carrera por 4 años consecutivos recibió el reconocimiento “Protagonismo Juvenil en Derechos Humanos” por la Universidad Nacional Autónoma de México. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item rounded">
+                        <img class="img-fluid" src="~/Content/img/orgullo/FREDDY.jpg" alt="" />
+                        <div class="text-center p-4">
+                            <h5>Ing. Freddy Andrade Castillo</h5>
+                            <span>“¡La clave del éxito es seguir aprendiendo todo el tiempo de cursos internacionales! ¡Aprendan inglés sí o sí, eso los llevará lejos!”</span>
+                        </div>
+                        <div class="team-text text-center bg-white p-4">
+                            <div class="d-flex justify-content-center">
+                                <p>Graduado de Ingeniería en Redes y Telecomunicaciones, ganó el 1er lugar en el “Bolivia CISCO NetRiders Latinoamérica y Caribe”, tres años consecutivos obtuvo el 1er lugar en la competencia de programación “ACM-ICPC” a nivel departamental y ganó reconocimientos a nivel nacional. Actualmente trabaja como Support Engineer en la empresa Visure Solutions de California Estados Unidos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="team-item rounded">
+                        <img class="img-fluid" src="~/Content/img/orgullo/KAREEN.jpg" alt="" />
+                        <div class="text-center p-4">
+                            <h5>Est. Karen Fernández Valdez</h5>
+                            <span>"No bajes la meta, aumenta el esfuerzo"</span>
+                        </div>
+                        <div class="team-text text-center bg-white p-4">
+                            <div class="d-flex justify-content-center">
+                                <p>Estudiante de Ingeniería Comercial, es tricampeona nacional de ciclismo ganando varios Juegos Plurinacionales, participó en el Kunming Plateau Half Marathon en China representando a Bolivia, una competición de ciclismo internacional. Destacó entre los tres primeros lugares en los Juegos Panamericanos en dos ocasiones, además de recibir varios reconocimientos en otras competencias de su disciplina.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="team-item rounded">
+                        <img class="img-fluid" src="~/Content/img/orgullo/LEA PLAZA.jpg" alt="" />
+                        <div class="text-center p-4">
+                            <h5>Est. Andrés López Lea Plaza</h5>
+                            <span>“La U me ha permitido continuar entrenando al formarme profesionalmente”</span>
+                        </div>
+                        <div class="team-text text-center bg-white p-4">
+                            <div class="d-flex justify-content-center">
+                                <p>Estudiante de Ciencias de la Comunicación Social, es tres veces campeón a nivel nacional en la disciplina de atletismo, el 2020 marcó un nuevo Record Nacional U23 en 60 metros planos en el Campeonato Nacional Indoor, ganador de varias medallas a nivel departamental y en 5 ocasiones representó a Tarija en los Juegos Plurinacionales quedando entre los tres primeros lugares.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- OrgulloUPDS End -->
+    <!-- Testimonios Start -->
+    <div id="Testimonios" class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto" style="max-width: 500px">
+                <h1 class="display-6 mb-5">Nuevos estudiantes UPDS</h1>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-3 d-none d-lg-block">
+                    <div class="testimonial-left h-100">
+                        <img class="img-fluid animated pulse infinite"
+                             src="~/Content/img/testimonios/DAVID ZAMBRANA.JPG"
+                             alt="" />
+                        <img class="img-fluid animated pulse infinite"
+                             src="~/Content/img/testimonios/KATHERINE CUELLAR.JPG"
+                             alt="" />
+                        <img class="img-fluid animated pulse infinite"
+                             src="~/Content/img/testimonios/JURGUEN ROMERO.JPG"
+                             alt="" />
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="owl-carousel testimonial-carousel">
+
+                        <div class="testimonial-item text-center">
+                            <img class="img-fluid rounded mx-auto mb-4"
+                                 src="~/Content/img/testimonios/DAVID ZAMBRANA.JPG"
+                                 alt="" />
+                            <p class="fs-5">
+                                “Elegí la UPDS por el sistema modular, por sus lindas instalaciones y porque tienen la carrera que deseo estudiar con docentes de muy buen prestigio”.
+                            </p>
+                            <h5>David Zambrana Harvey</h5>
+                            <span>Estudiante UPDS</span>
+                        </div>
+
+                        <div class="testimonial-item text-center">
+                            <img class="img-fluid rounded mx-auto mb-4"
+                                 src="~/Content/img/testimonios/JURGUEN ROMERO.JPG"
+                                 alt="" />
+                            <p class="fs-5">
+                                “Preferí la UPDS porque tiene unos laboratorios muy amplios y completos para el aprendizaje de todos sus estudiantes, y porque la UPDS cuenta con docentes que te inspiran”.
+                            </p>
+                            <h5>Jurguen Romero</h5>
+                            <span>Estudiante UPDS</span>
+                        </div>
+
+                        <div class="testimonial-item text-center">
+                            <img class="img-fluid rounded mx-auto mb-4"
+                                 src="~/Content/img/testimonios/KATHERINE CUELLAR.JPG"
+                                 alt="" />
+                            <p class="fs-5">
+                                “Escogí la UPDS por sus horarios a elección ya que así puedo organizar mis actividades del día sin problemas”.
+                            </p>
+                            <h5>Katherine Cuellar</h5>
+                            <span>Estudiante UPDS</span>
+                        </div>
+
+                        <div class="testimonial-item text-center">
+                            <img class="img-fluid rounded mx-auto mb-4"
+                                 src="~/Content/img/testimonios/MATIAS MIRANDA.JPG"
+                                 alt="" />
+                            <p class="fs-5">
+                                “Escogí esta universidad al ver a mi hermano convertirse en un buen profesional UPDS, lo que me motiva a seguir el mismo camino para alcanzar mis objetivos y metas”.
+                            </p>
+                            <h5>Matías Miranda</h5>
+                            <span>Estudiante UPDS</span>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-3 d-none d-lg-block">
+                    <div class="testimonial-right h-100">
+                        <img class="img-fluid animated pulse infinite"
+                             src="~/Content/img/testimonios/DAVID ZAMBRANA.JPG"
+                             alt="" />
+                        <img class="img-fluid animated pulse infinite"
+                             src="~/Content/img/testimonios/KATHERINE CUELLAR.JPG"
+                             alt="" />
+                        <img class="img-fluid animated pulse infinite"
+                             src="~/Content/img/testimonios/JURGUEN ROMERO.JPG"
+                             alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonios End -->
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark footer mt-5 pt-5 wow fadeIn"
+         data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-12 col-md-12 mb-2">
+                    <div class="text-center">
+                        <img class="img-fluid"
+                             src="~/Content/img/icon/isologo-blanco-upds_800x800.png"
+                             alt="LogoUPDS" width="170" height="170" />
+                    </div>
+                    <div class="text-center mt-3">
+                        <img class="img-fluid"
+                             src="~/Content/img/icon/slogan-blanco-pmh_800x117.png"
+                             alt="LogoUPDS" width="230" height="80" />
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-6 text-center">
+                    <h3 class="text-white">MISIÓN</h3>
+                    <p>Generar cambios en las personas para desarrollar emprendedores socialmente responsables capaces de responder a desafíos emergentes.</p>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 text-center">
+                    <h3 class="text-white">VISIÓN</h3>
+                    <p>Generar cambios en las personas para desarrollar emprendedores socialmente responsables capaces de responder a desafíos emergentes.</p>
+                </div>
+                <div class="col-sm-12 text-center">
+                    <div class="mb-3">
+                        <h3 class="text-white">Información de Contacto</h3>
+                    </div>
+                    <p>
+                        <i class="fa fa-map-marker-alt me-3"></i>Av. Los Sauces, esq. Fabián Ruiz
+                    </p>
+                    <p><i class="fa fa-phone-alt me-3"></i>(591-4) 665-8303</p>
+                    <p>
+                        <i class="fa fa-envelope me-3"></i>infoupds.tarija@upds.edu.bo
+                    </p>
+                    <div class="text-center">
+                        <a class="btn btn-redes me-2" target="_blank" href="https://www.facebook.com/universidadprivadadomingosaviotarija">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a class="btn btn-redes me-2" target="_blank" href="https://www.instagram.com/upds_tarija/">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a class="btn btn-redes me-2" target="_blank" href="https://www.youtube.com/c/UniversidadPrivadaDomingoSavioUpdsTarija">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a class="btn btn-redes me-2" target="_blank" href="https://api.whatsapp.com/send/?phone=59175111830&text&type=phone_number&app_absent=0">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+    <!--Modal Carreras Start-->
+    <!-- Button trigger modal -->
+    <!-- Comercial -->
+    <div class="modal fade" id="comercial" tabindex="-1" data-bs-backdrop="static" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title modal-title-personalizado">Ingeniería Comercial</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="col-sm-12">
+                        <p class="parrafo-modal">El Ingeniero/a Comercial de la UPDS aplica las ciencias económicas y sociales como base para desarrollar la gestión estratégica y operativa de una organización, con enfoque en la mercadotecnia para estructurar negocios rentables y duraderos. Emplea métodos cualitativos y cuantitativos en su desempeño laboral para la comprensión de los procesos de dirección, diseño, organización, ejecución y control de sistemas de comercialización de bienes y servicios.</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="d-grid gap-2 col-6 mx-auto">
+                        <a class="btn btn-primary" target="_blank" href="https://drive.google.com/file/d/1-weTYdH2PAkMmewPZBGzMroCsFzrIvzV/view">Malla curricular <i class="fas fa-download"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Empresas -->
+    <div class="modal fade" id="empresas" tabindex="-1" data-bs-backdrop="static" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title modal-title-personalizado" id="exampleModalLabel">Administración de Empresas</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="col-sm-12">
+                        <p class="parrafo-modal">El Administrador/a de Empresas de la UPDS crea, planifica, organiza y dirige diferentes tipos de organizaciones velando por obtener los máximos beneficios y utilizar racionalmente los recursos, cuidando el entorno social y ecológico, y asumiendo los retos innovadores que faciliten el logro de los objetivos de la organización en la que esté inserto.</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="d-grid gap-2 col-6 mx-auto">
+                        <a class="btn btn-primary" target="_blank" href="https://drive.google.com/file/d/1W2PM5aJ6r1R004BfQYyWAECqyIm2ynkT/view">Malla curricular <i class="fas fa-download"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contaduria -->
+    <div class="modal fade" id="contaduria" tabindex="-1" data-bs-backdrop="static" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title modal-title-personalizado" id="exampleModalLabel">Contaduría Pública</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="col-sm-12">
+                        <p class="parrafo-modal">El Contador/a Pública de la UPDS aplica procesos de información económico-financiera para la toma de decisiones en organizaciones públicas o privadas. Actúa con ética basado en valores y propone soluciones creativas en base a las necesidades contables de la empresa en la cual se desempeña, a fin de mejorar la calidad de información y los procesos contables, financieros y administrativos.</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="d-grid gap-2 col-6 mx-auto">
+                        <a class="btn btn-primary" target="_blank" href="https://drive.google.com/file/d/1rx4DpDRqJJ5KT3a8HhuSnhaf2i-NZK49/view">Malla curricular <i class="fas fa-download"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Sistemas -->
+    <div class="modal fade" id="sistemas" tabindex="-1" data-bs-backdrop="static" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title modal-title-personalizado" id="exampleModalLabel">Ingeniería de Sistemas</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="col-sm-12">
+                        <p class="parrafo-modal">El Ingeniero/a de Sistemas de la UPDS desarrolla actuaciones integrales para resolver problemas del contexto, implementar soluciones tecnológicas innovadoras para todo tipo de empresas que contribuyen a incrementar su productividad. Utiliza las TIC´s para mejorar la calidad de vida y acortar la brecha digital.</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="d-grid gap-2 col-6 mx-auto">
+                        <a class="btn btn-primary" target="_blank" href="https://drive.google.com/file/d/1Dxo8cx-CNWuDbcEVP-YCNtLb95CcBVFa/view">Malla curricular <i class="fas fa-download"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Industrial -->
+    <div class="modal fade" id="industrial" tabindex="-1" data-bs-backdrop="static" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title modal-title-personalizado" id="exampleModalLabel">Ingeniería Industrial</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="col-sm-12">
+                        <p class="parrafo-modal">El Ingeniero/a Industrial de la UPDS estudia el mejoramiento permanente de los sistemas productivos de bienes y servicios, desde la planificación estratégica hasta la ejecución, con la finalidad de incrementar la productividad de las micro, pequeñas, medianas y grandes empresas públicas o privadas, mostrando una fuerte relevancia en el desarrollo socioeconómico regional y nacional.</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="d-grid gap-2 col-6 mx-auto">
+                        <a class="btn btn-primary" target="_blank" href="https://drive.google.com/file/d/1hX_V4TZKRmzV1g8K-0-Jfw8-r1q0kEIp/view">Malla curricular <i class="fas fa-download"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Redes -->
+    <div class="modal fade" id="redes" tabindex="-1" data-bs-backdrop="static" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title modal-title-personalizado" id="exampleModalLabel">Ingeniería en Redes y Telecomunicaciones</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="col-sm-12">
+                        <p class="parrafo-modal">El Ingeniero/a en Redes y Telecomunicaciones de la UPDS es capaz de aplicar el razonamiento lógico matemático para identificar, analizar y resolver problemas de esta área y de su entorno mediante el uso de diversos métodos. Utiliza las nuevas tecnologías y las metodologías adecuadas para satisfacer las necesidades de la sociedad y mejorar la calidad de vida de las personas disminuyendo la actual brecha digital.</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="d-grid gap-2 col-6 mx-auto">
+                        <a class="btn btn-primary" target="_blank" href="https://drive.google.com/file/d/1P8cEATKuwTyLxWNbL5wJc3CYpBcPTwa-/view">Malla curricular <i class="fas fa-download"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Ambiental -->
+    <div class="modal fade" id="ambiental" tabindex="-1" data-bs-backdrop="static" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title modal-title-personalizado" id="exampleModalLabel">Ingeniería en Gestión Ambiental</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="col-sm-12">
+                        <p class="parrafo-modal">El Ingeniero/a en Gestión Ambiental de la UDPS realiza estudios de preservación de los ecosistemas naturales y biológicos, diseña sistemas de prevención, evaluación, monitoreo y control de los elementos contaminantes y contaminados por las acciones humanas buscando minimizar los efectos de los mismos, además de proponer políticas y normativas ambientales para el sector industrial y de servicios.</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="d-grid gap-2 col-6 mx-auto">
+                        <a class="btn btn-primary" target="_blank" href="https://drive.google.com/file/d/1XFsKwZb3rJ8s7TV5jLFHz5B6QPE3HVH5/view">Malla curricular <i class="fas fa-download"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Civil -->
+    <div class="modal fade" id="civil" tabindex="-1" data-bs-backdrop="static" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title modal-title-personalizado" id="exampleModalLabel">Ingeniería Civil</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="col-sm-12">
+                        <p class="parrafo-modal">El Ingeniero/a Civil de la UPDS incrementa la eficiencia y eficacia de las empresas constructoras públicas o privadas supervisando y administrando las obras de ingeniería, mostrando una fuerte relevancia en el desarrollo socioeconómico regional y nacional, aplicando criterios de rentabilidad, sostenibilidad y respeto por el medio ambiente.</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="d-grid gap-2 col-6 mx-auto">
+                        <a class="btn btn-primary" target="_blank" href="https://drive.google.com/file/d/13Cx17FiQgDbI2nAci1M1LfOcOqa91rf6/view">Malla curricular <i class="fas fa-download"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Psicologia -->
+    <div class="modal fade" id="psicologia" tabindex="-1" data-bs-backdrop="static" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title modal-title-personalizado" id="exampleModalLabel">Psicología</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="col-sm-12">
+                        <p class="parrafo-modal">El licenciado/a en Psicología de la UPDS relaciona el conocimiento del funcionamiento del aparato psíquico del ser humano en su integralidad biológica, psicológica y social, constituido por procesos psicológicos internos, así como conductas tangibles externas. Diagnostica diferentes problemáticas de las personas a través de técnicas e instrumentos con fines preventivos o para proponer tratamientos que permitan superar una determinada situación considerando los niveles cognitivo, afectivo, social y cultural.</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="d-grid gap-2 col-6 mx-auto">
+                        <a class="btn btn-primary" target="_blank" href="https://drive.google.com/file/d/1sohpReNP7ACbFKNLSwvI-10e7Y85yruH/view">Malla curricular <i class="fas fa-download"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Comunicacion -->
+    <div class="modal fade" id="comunicacion" tabindex="-1" data-bs-backdrop="static" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title modal-title-personalizado" id="exampleModalLabel">Ciencias de la Comunicación Social</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="col-sm-12">
+                        <p class="parrafo-modal">El Comunicador/a Social de la UPDS es capaz de investigar, producir y difundir información a través del desarrollo de herramientas tecnológicas; puede interpretar la realidad y orientar responsablemente a la sociedad de acuerdo con criterios éticos y con compromiso social, elaborando estrategias comunicacionales en instituciones privadas o públicas y medios de comunicación digitales y tradicionales.</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="d-grid gap-2 col-6 mx-auto">
+                        <a class="btn btn-primary" target="_blank" href="https://drive.google.com/file/d/1dkzVHK9eBTqP5YA3FIARbFqAj-vyqvPo/view">Malla curricular <i class="fas fa-download"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Derecho -->
+    <div class="modal fade" id="derecho" tabindex="-1" data-bs-backdrop="static" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title modal-title-personalizado" id="exampleModalLabel">Derecho</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="col-sm-12">
+                        <p class="parrafo-modal">El licenciado/a en Derecho de la UPDS es capaz de identificar al derecho como una ciencia y relacionarla con la realidad social aplicándola a casos concretos de las personas, instituciones y el país, en base a la comprensión del funcionamiento de los sistemas jurídicos modernos. Identifica aspectos jurídicamente relevantes, obtiene y selecciona los materiales normativos pertinentes y aplica las formas de interpretación y argumentación aceptada en la práctica del Derecho.</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="d-grid gap-2 col-6 mx-auto">
+                        <a class="btn btn-primary" target="_blank" href="https://drive.google.com/file/d/1XVNaWqJzXeMlCUb6DhNt-iVgNGkTsGOt/view">Malla curricular <i class="fas fa-download"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Modal Carreras End-->
+
+    <a target="_blank" href="https://www.upds.edu.bo/tour_virtual/upds-tarija/" class="btn btn-lg btn-primary btn-estatico back-to-tour">
+        <img src="~/Content/img/icon/botones flotantes/tour.svg" width="35"/>
+    </a>
+
+    <a target="_blank" href="https://api.whatsapp.com/send/?phone=59175111830&text&type=phone_number&app_absent=0" class="btn btn-lg btn-primary btn-estatico back-to-whatsaap">
+        <img src="~/Content/img/icon/botones flotantes/whatsaap.svg" width="35"/>
+    </a>
+
+    <a href="#" class="btn btn-lg btn-primary btn-estatico back-to-top">
+        <img src="~/Content/img/icon/botones flotantes/flecha.svg" width="35"/>
+    </a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/Content/lib/wow/wow.min.js"></script>
+    <script src="~/Content/lib/easing/easing.min.js"></script>
+    <script src="~/Content/lib/waypoints/waypoints.min.js"></script>
+    <script src="~/Content/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="~/Content/lib/counterup/counterup.min.js"></script>
+    <script src="~/cute-alert.js"></script>
+    <script>
+        $(document).ready(function () {
+            Limpiar();
+            $('.back-to-top').hide();
+            $('.back-to-whatsaap').hide();
+            $('.back-to-tour').hide();
+            $('.back-to-pendiente').hide();
+        });
+
+        function ContarCaracteres(mensaje) {
+            $("#caracteresDisponibles").html("");
+            var caracteresRestantes = 700 - mensaje.length;
+            $("#caracteresDisponibles").html(caracteresRestantes + " / " + 700);
+        }
+
+        function Limpiar() {
+            $("#nombre").val("");
+            $("#correo").val("");
+            $("#celular").val("");
+            $("#mensaje").val("");
+        }
+
+        function EnviarMensaje() {
+            var m = { Nombre: $("#nombre").val(), Correo: $("#correo").val(), Celular: $("#celular").val(), Mensaje: $("#mensaje").val() };
+            $.ajax({
+                url: '@Url.Action("EnviarMensaje", "Inicio")',
+                type: 'POST',
+                contentType: 'application/json',
+                dataType: 'json',
+                data: JSON.stringify(m),
+                success: function (s) {
+                    switch (s.Tipo) {
+                        case 1:
+                            Toast("success", "Hemos recibido su mensaje. <br/>Le responderemos a la brevedad.");
+                            Limpiar();
+                            break;
+                        case 2:
+                            Toast("warning", s.Msj);
+                            break;
+                        case 3:
+                            Toast("error", s.Msj);
+                            break;
+                    };
+                }
+            });
+        }
+
+        function Toast(tipo, msj) {
+            cuteToast({
+                type: tipo,
+                message: msj,
+                timer: 5000
+            });
+        }
+    </script>
+    <!-- Template Javascript -->
+    <script src="~/Content/js/main.js"></script>
+</body>
+</html>

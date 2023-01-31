@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LandingPageModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Consultas">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fecha" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="nombre" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="correo" Type="String" MaxLength="70" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="celular" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="mensaje" Type="String" MaxLength="700" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="idEstado" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Estado" Relationship="Self.FK__Consultas__idEst__398D8EEE" FromRole="Consultas" ToRole="Estado" />
+  </EntityType>
+  <EntityType Name="Estado">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Consultas" Relationship="Self.FK__Consultas__idEst__398D8EEE" FromRole="Estado" ToRole="Consultas" />
+  </EntityType>
+  <EntityType Name="Rol">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="estado" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Usuario" Relationship="Self.FK__Usuario__idRol__412EB0B6" FromRole="Rol" ToRole="Usuario" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="clave" Type="String" MaxLength="35" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="estado" Type="Boolean" Nullable="false" />
+    <Property Name="idRol" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Rol" Relationship="Self.FK__Usuario__idRol__412EB0B6" FromRole="Usuario" ToRole="Rol" />
+  </EntityType>
+  <Association Name="FK__Consultas__idEst__398D8EEE">
+    <End Role="Estado" Type="Self.Estado" Multiplicity="1" />
+    <End Role="Consultas" Type="Self.Consultas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Consultas">
+        <PropertyRef Name="idEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Usuario__idRol__412EB0B6">
+    <End Role="Rol" Type="Self.Rol" Multiplicity="1" />
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Rol">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Usuario">
+        <PropertyRef Name="idRol" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="LandingPageEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Consultas" EntityType="Self.Consultas" />
+    <EntitySet Name="Estado" EntityType="Self.Estado" />
+    <EntitySet Name="Rol" EntityType="Self.Rol" />
+    <EntitySet Name="Usuario" EntityType="Self.Usuario" />
+    <AssociationSet Name="FK__Consultas__idEst__398D8EEE" Association="Self.FK__Consultas__idEst__398D8EEE">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="Consultas" EntitySet="Consultas" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Usuario__idRol__412EB0B6" Association="Self.FK__Usuario__idRol__412EB0B6">
+      <End Role="Rol" EntitySet="Rol" />
+      <End Role="Usuario" EntitySet="Usuario" />
+    </AssociationSet>
+    <EntitySet Name="Seccion" EntityType="LandingPageModel.Seccion" />
+    <EntitySet Name="Carrera" EntityType="LandingPageModel.Carrera" />
+    <EntitySet Name="SubSeccion" EntityType="LandingPageModel.SubSeccion" />
+    <AssociationSet Name="FK__Carrera__idSubSe__534D60F1" Association="LandingPageModel.FK__Carrera__idSubSe__534D60F1">
+      <End Role="SubSeccion" EntitySet="SubSeccion" />
+      <End Role="Carrera" EntitySet="Carrera" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SubSeccio__idSec__5070F446" Association="LandingPageModel.FK__SubSeccio__idSec__5070F446">
+      <End Role="Seccion" EntitySet="Seccion" />
+      <End Role="SubSeccion" EntitySet="SubSeccion" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Seccion">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="titulo" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="subTitulo" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="descripcion" Type="String" MaxLength="110" FixedLength="false" Unicode="true" />
+    <Property Name="imagen" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="numero" Type="Int32" Nullable="false" />
+    <Property Name="estado" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="SubSeccion" Relationship="LandingPageModel.FK__SubSeccio__idSec__5070F446" FromRole="Seccion" ToRole="SubSeccion" />
+  </EntityType>
+  <EntityType Name="Carrera">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="descripcion" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="malla" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="estado" Type="Boolean" Nullable="false" />
+    <Property Name="idSubSeccion" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="SubSeccion" Relationship="LandingPageModel.FK__Carrera__idSubSe__534D60F1" FromRole="Carrera" ToRole="SubSeccion" />
+  </EntityType>
+  <EntityType Name="SubSeccion">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="titulo" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="subTitulo" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="descripcion" Type="String" MaxLength="110" FixedLength="false" Unicode="true" />
+    <Property Name="imagen" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="estado" Type="Boolean" Nullable="false" />
+    <Property Name="idSeccion" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Carrera" Relationship="LandingPageModel.FK__Carrera__idSubSe__534D60F1" FromRole="SubSeccion" ToRole="Carrera" />
+    <NavigationProperty Name="Seccion" Relationship="LandingPageModel.FK__SubSeccio__idSec__5070F446" FromRole="SubSeccion" ToRole="Seccion" />
+  </EntityType>
+  <Association Name="FK__Carrera__idSubSe__534D60F1">
+    <End Type="LandingPageModel.SubSeccion" Role="SubSeccion" Multiplicity="1" />
+    <End Type="LandingPageModel.Carrera" Role="Carrera" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SubSeccion">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Carrera">
+        <PropertyRef Name="idSubSeccion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SubSeccio__idSec__5070F446">
+    <End Type="LandingPageModel.Seccion" Role="Seccion" Multiplicity="1" />
+    <End Type="LandingPageModel.SubSeccion" Role="SubSeccion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Seccion">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="SubSeccion">
+        <PropertyRef Name="idSeccion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LandingPageModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Carrera">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="nvarchar" MaxLength="60" />
+    <Property Name="descripcion" Type="nvarchar" MaxLength="150" />
+    <Property Name="malla" Type="nvarchar" MaxLength="80" />
+    <Property Name="estado" Type="bit" Nullable="false" />
+    <Property Name="idSubSeccion" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Consultas">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fecha" Type="datetime" Nullable="false" />
+    <Property Name="nombre" Type="nvarchar" MaxLength="60" Nullable="false" />
+    <Property Name="correo" Type="nvarchar" MaxLength="70" Nullable="false" />
+    <Property Name="celular" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="mensaje" Type="nvarchar" MaxLength="700" Nullable="false" />
+    <Property Name="idEstado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Estado">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="nvarchar" MaxLength="60" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Rol">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="nvarchar" MaxLength="60" Nullable="false" />
+    <Property Name="estado" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Seccion">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="titulo" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="subTitulo" Type="nvarchar" MaxLength="60" Nullable="false" />
+    <Property Name="descripcion" Type="nvarchar" MaxLength="110" />
+    <Property Name="imagen" Type="nvarchar" MaxLength="250" />
+    <Property Name="numero" Type="int" Nullable="false" />
+    <Property Name="estado" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SubSeccion">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="titulo" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="subTitulo" Type="nvarchar" MaxLength="60" />
+    <Property Name="descripcion" Type="nvarchar" MaxLength="110" />
+    <Property Name="imagen" Type="nvarchar" MaxLength="250" />
+    <Property Name="estado" Type="bit" Nullable="false" />
+    <Property Name="idSeccion" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="nvarchar" MaxLength="60" Nullable="false" />
+    <Property Name="clave" Type="nvarchar" MaxLength="35" Nullable="false" />
+    <Property Name="estado" Type="bit" Nullable="false" />
+    <Property Name="idRol" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__Carrera__idSubSe__534D60F1">
+    <End Role="SubSeccion" Type="Self.SubSeccion" Multiplicity="1" />
+    <End Role="Carrera" Type="Self.Carrera" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SubSeccion">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Carrera">
+        <PropertyRef Name="idSubSeccion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Consultas__idEst__398D8EEE">
+    <End Role="Estado" Type="Self.Estado" Multiplicity="1" />
+    <End Role="Consultas" Type="Self.Consultas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Consultas">
+        <PropertyRef Name="idEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SubSeccio__idSec__5070F446">
+    <End Role="Seccion" Type="Self.Seccion" Multiplicity="1" />
+    <End Role="SubSeccion" Type="Self.SubSeccion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Seccion">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="SubSeccion">
+        <PropertyRef Name="idSeccion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Usuario__idRol__412EB0B6">
+    <End Role="Rol" Type="Self.Rol" Multiplicity="1" />
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Rol">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Usuario">
+        <PropertyRef Name="idRol" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="LandingPageModelStoreContainer">
+    <EntitySet Name="Carrera" EntityType="Self.Carrera" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Consultas" EntityType="Self.Consultas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Estado" EntityType="Self.Estado" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Rol" EntityType="Self.Rol" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Seccion" EntityType="Self.Seccion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SubSeccion" EntityType="Self.SubSeccion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Carrera__idSubSe__534D60F1" Association="Self.FK__Carrera__idSubSe__534D60F1">
+      <End Role="SubSeccion" EntitySet="SubSeccion" />
+      <End Role="Carrera" EntitySet="Carrera" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Consultas__idEst__398D8EEE" Association="Self.FK__Consultas__idEst__398D8EEE">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="Consultas" EntitySet="Consultas" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SubSeccio__idSec__5070F446" Association="Self.FK__SubSeccio__idSec__5070F446">
+      <End Role="Seccion" EntitySet="Seccion" />
+      <End Role="SubSeccion" EntitySet="SubSeccion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Usuario__idRol__412EB0B6" Association="Self.FK__Usuario__idRol__412EB0B6">
+      <End Role="Rol" EntitySet="Rol" />
+      <End Role="Usuario" EntitySet="Usuario" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

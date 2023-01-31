@@ -1,0 +1,79 @@
+﻿:root {
+    --colorPrimario: #1A5276;
+    --colorSecundario: #2471A3;
+}
+
+#menuPrincipal {
+    background-color: var(--colorPrimario);
+}
+
+
+.modal-franja{
+    height:5px;
+    background-color: var(--colorPrimario);
+}
+
+.list-hover:hover {
+    color: #fff;
+    background-color: var(--colorSecundario);
+    cursor: pointer;
+}
+
+.datosPersona{
+    font-size:13px;
+}
+
+.btn-accion {
+    background-color: var(--colorSecundario);
+    color: #fff;
+}
+
+.btn-opcion-imprimir {
+    color: #5D6D7E;
+}
+
+.btn-opcion-extender {
+    color: #5DADE2;
+}
+
+.btn-opcion-inactivar {
+    color: #D35400;
+}
+
+.btn-opcion-eliminar {
+    color: #CD6155;
+}
+
+.sub-menu-prorroga{
+    width: 16.6%;
+    cursor: pointer;
+    color: #000;
+
+}
+
+.sub-menu-prorroga a{
+    color: #000;
+}
+
+.sub-menu-prorroga-activado {
+    background-color: #1F618D;
+    border:solid 1px #1F618D;
+}
+    .sub-menu-prorroga-activado a{
+        color: white;
+    }
+
+.btn-accion:hover {
+    background-color: var(--colorPrimario);
+    color: #fff;
+}
+
+
+.sub-menu-prorroga:hover {
+    background-color: #5499C7;
+    border: solid 1px #5499C7;
+}
+
+    .sub-menu-prorroga:hover a {
+        color: white;
+    }

@@ -1,0 +1,223 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h4>Secciones</h4>
+<div id="cargando" class="text-center">
+    <div class="spinner-border" role="status">
+        <span class="sr-only">Loading...</span>
+    </div>
+</div>
+
+<div class="table-responsive mt-4" id="contenido">
+    <table id="tabla" class="table table-striped table-bordered display" style="width:100%"></table>
+</div>
+
+<!--Modal-->
+<div class="modal fade" id="modalSecciones" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-franja"></div>
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Sección</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-7">
+                        <div class="form-group">
+                            <label>Titulo:</label>
+                            <input type="number" class="form-control" id="id" hidden="hidden">
+                            <input type="text" class="form-control" id="titulo" placeholder="Titulo" required>
+                        </div>
+                    </div>
+                    <div class="col-sm-5">
+                        <div class="form-group">
+                            <label>Titulo:</label>
+                            <select class="form-select" id="numero">
+                                <option selected value="0">Seleccione el numero de la seccion</option>
+                                <option value="1">Seccion 1</option>
+                                <option value="2">Seccion 2</option>
+                                <option value="3">Seccion 3</option>
+                                <option value="4">Seccion 4</option>
+                                <option value="5">Seccion 5</option>
+                                <option value="6">Seccion 6</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 mt-3">
+                        <div class="form-group">
+                            <label>Subtitulo:</label>
+                            <textarea class="form-control" id="subTitulo" placeholder="Subtitulo" rows="2"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 mt-3">
+                        <div class="form-group">
+                            <label>Descripción:</label>
+                            <textarea class="form-control" id="descripcion" placeholder="Descripción" rows="2"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <label>Imagen:</label>
+                            <input type="text" class="form-control" id="imagen" placeholder="URL de la imagen" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-accion" onclick="Guardar()">Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    tabla = $('#tabla').DataTable({
+        columns: [
+            { title: "#", width: '4%' },
+            { title: "Imagen", width: '8%' },
+            { title: "Titulo", width: '20%' },
+            { title: "Subtitulo", width: '43%' },
+            { title: "Estado", width: '20%' },
+            { title: "<button  class='btn btn-accion' data-bs-toggle='modal' data-bs-target='#modalSecciones' onclick='Limpiar()'>Nuevo</button>", width: '5%' }
+        ],
+        "language": {
+            "url": "//cdn.datatables.net/plug-ins/1.10.19/i18n/Spanish.json"
+        },
+        "lengthMenu": [[5, 10, 15, -1], [5, 10, 15, "All"]]
+    });
+    $("#cargando").show();
+    $("#contenido").hide();
+
+    $(document).ready(function () {
+        setTimeout(function () {
+            $("#cargando").hide();
+            $("#contenido").show();
+            Actualizar();
+        }, 1000);
+    });
+
+    function Limpiar() {
+        $("#id").val(0);
+        $("#titulo").val("");
+        $("#subTitulo").val("");
+        $("#descripcion").val("");
+        $("#imagen").val("");
+        $("#numero").val(0);
+    }
+
+    function Actualizar() {
+        $.getJSON('@Url.Action("Actualizar", "Secciones")', function (o) {
+            tabla.destroy();
+            tabla = $("#tabla").DataTable({
+                data: o,
+                "language": {
+                    "url": "//cdn.datatables.net/plug-ins/1.10.19/i18n/Spanish.json"
+                }
+            });
+        });
+    }
+
+    function Guardar() {
+        var seccion = { id: $("#id").val(), titulo: $("#titulo").val(), subTitulo: $("#subTitulo").val(), descripcion: $("#descripcion").val(), imagen: $("#imagen").val(), numero: $("#numero").val() };
+        $.ajax({
+            url: '@Url.Action("Guardar", "Secciones")',
+            type: 'POST',
+            contentType: 'application/json',
+            dataType: 'json',
+            data: JSON.stringify(seccion),
+            success: function (s) {
+                switch (s.Tipo) {
+                    case 1:
+                        Toast("success", s.Msj);
+                        $("#modalSecciones").modal('hide');
+                        Limpiar();
+                        Actualizar();
+                        break;
+                    case 2:
+                        Toast("warning", s.Msj);
+                        break;
+                    case 3:
+                        Toast("error", s.Msj);
+                        break;
+                };
+            }
+        });
+    }
+
+    function Mostrar(id)
+    {
+        $.getJSON('@Url.Action("Mostrar", "Secciones")', { id: id }, function (o) {
+            console.log(o);
+            $("#id").val(o.id);
+            $("#titulo").val(o.titulo);
+            $("#subTitulo").val(o.subTitulo);
+            $("#descripcion").val(o.descripcion);
+            $("#imagen").val(o.imagen);
+            $("#numero").val(o.numero);
+        });
+    }
+
+    function Deshabilitar(id)
+    {
+        cuteAlert({
+            type: "question",
+            title: "Deshabilitar",
+            message: "¿Esta seguro que desea deshabilitar esta seccion?",
+            confirmText: "Aceptar",
+            cancelText: "Cancelar"
+        }).then((e) => {
+            console.log(e);
+            if (e == ("confirm")) {
+                $.getJSON('@Url.Action("Deshabilitar", "Secciones")', { id: id }, function (s) {
+                    switch (s.Tipo) {
+                        case 1:
+                            Actualizar();
+                            Toast("success", s.Msj);
+                            break;
+                        case 2:
+                            Toast("warning", s.Msj);
+                            break;
+                        case 3:
+                            Toast("error", s.Msj);
+                            break;
+                    };
+                });
+            }
+        })
+    }
+
+    function Habilitar(id)
+    {
+        cuteAlert({
+            type: "question",
+            title: "Habilitar",
+            message: "¿Esta seguro que desea habilitar esta seccion?",
+            confirmText: "Aceptar",
+            cancelText: "Cancelar"
+        }).then((e) => {
+            if (e == ("confirm")) {
+                $.getJSON('@Url.Action("Habilitar", "Secciones")', { id: id }, function (s) {
+                    switch (s.Tipo) {
+                        case 1:
+                            Actualizar();
+                            Toast("success", s.Msj);
+                            break;
+                        case 2:
+                            Toast("warning", s.Msj);
+                            break;
+                        case 3:
+                            Toast("error", s.Msj);
+                            break;
+                    };
+                });
+            }
+        })
+    }
+
+</script>
