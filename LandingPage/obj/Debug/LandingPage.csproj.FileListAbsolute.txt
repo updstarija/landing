@@ -446,3 +446,4 @@ C:\Users\Sistemas\Desktop\Desarrollos - 12-04-2022 en adelante\LandingPage\Landi
 C:\Users\Sistemas\Desktop\Desarrollos - 12-04-2022 en adelante\LandingPage\LandingPage\LandingPage\obj\Debug\LandingPage.csproj.CopyComplete
 C:\Users\Sistemas\Desktop\Desarrollos - 12-04-2022 en adelante\LandingPage\LandingPage\LandingPage\obj\Debug\LandingPage.dll
 C:\Users\Sistemas\Desktop\Desarrollos - 12-04-2022 en adelante\LandingPage\LandingPage\LandingPage\obj\Debug\LandingPage.pdb
+C:\Users\Sistemas\Desktop\Desarrollos - 12-04-2022 en adelante\LandingPage\LandingPage\LandingPage\obj\Debug\LandingPage.csproj.AssemblyReference.cache

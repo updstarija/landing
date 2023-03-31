@@ -5,7 +5,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <_PublishTargetUrl>C:\Users\Sistemas\Desktop\Produccion\LandingPage</_PublishTargetUrl>
-    <History>True|2023-01-31T19:23:18.7115993Z;True|2023-01-30T16:50:07.2910548-04:00;True|2023-01-30T16:23:58.1610963-04:00;</History>
+    <History>True|2023-02-01T22:32:26.5737790Z;True|2023-02-01T16:36:18.5882102-04:00;True|2023-01-31T15:23:18.7115993-04:00;True|2023-01-30T16:50:07.2910548-04:00;True|2023-01-30T16:23:58.1610963-04:00;</History>
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/Antlr3.Runtime.dll">
@@ -42,10 +42,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>11/28/2018 13:04:36</publishTime>
     </File>
     <File Include="bin/LandingPage.dll">
-      <publishTime>01/31/2023 15:23:17</publishTime>
+      <publishTime>02/01/2023 18:32:25</publishTime>
     </File>
     <File Include="bin/LandingPage.pdb">
-      <publishTime>01/31/2023 15:23:17</publishTime>
+      <publishTime>02/01/2023 18:32:25</publishTime>
     </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
       <publishTime>09/05/2018 16:10:50</publishTime>
@@ -240,7 +240,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>01/16/2023 18:18:37</publishTime>
     </File>
     <File Include="Content/css/style.css">
-      <publishTime>01/30/2023 16:46:06</publishTime>
+      <publishTime>02/01/2023 18:28:19</publishTime>
     </File>
     <File Include="Content/img/carreras.jpg">
       <publishTime>01/30/2023 16:15:44</publishTime>
@@ -287,6 +287,9 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <File Include="Content/img/icon/slogan-blanco-pmh_800x117.png">
       <publishTime>01/10/2023 18:02:13</publishTime>
     </File>
+    <File Include="Content/img/icon/updstarija.png">
+      <publishTime>02/01/2023 18:08:19</publishTime>
+    </File>
     <File Include="Content/img/orgullo/FEER.jpg">
       <publishTime>01/30/2023 15:53:17</publishTime>
     </File>
@@ -323,8 +326,14 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <File Include="Content/img/Ventajas/CRISCOS.png">
       <publishTime>01/30/2023 15:41:01</publishTime>
     </File>
+    <File Include="Content/img/Ventajas/CRISCOS.svg">
+      <publishTime>02/01/2023 18:05:04</publishTime>
+    </File>
     <File Include="Content/img/Ventajas/DOCENTES.png">
       <publishTime>01/30/2023 15:41:01</publishTime>
+    </File>
+    <File Include="Content/img/Ventajas/docentes.svg">
+      <publishTime>02/01/2023 18:05:04</publishTime>
     </File>
     <File Include="Content/img/Ventajas/FER.jpg">
       <publishTime>01/30/2023 15:41:01</publishTime>
@@ -332,8 +341,17 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <File Include="Content/img/Ventajas/HORARIOS.png">
       <publishTime>01/30/2023 15:41:01</publishTime>
     </File>
+    <File Include="Content/img/Ventajas/HORARIOS.svg">
+      <publishTime>02/01/2023 18:05:04</publishTime>
+    </File>
     <File Include="Content/img/Ventajas/INFRAESTRUCTURA.png">
       <publishTime>01/30/2023 15:41:01</publishTime>
+    </File>
+    <File Include="Content/img/Ventajas/infraestructura.svg">
+      <publishTime>02/01/2023 18:05:04</publishTime>
+    </File>
+    <File Include="Content/img/Ventajas/materia.svg">
+      <publishTime>02/01/2023 18:05:04</publishTime>
     </File>
     <File Include="Content/js/all.min.js">
       <publishTime>12/30/2022 15:29:46</publishTime>
@@ -438,7 +456,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>01/13/2023 17:34:40</publishTime>
     </File>
     <File Include="Views/Inicio/Index.cshtml">
-      <publishTime>01/31/2023 15:21:22</publishTime>
+      <publishTime>02/01/2023 18:31:17</publishTime>
     </File>
     <File Include="Views/Login/Index.cshtml">
       <publishTime>01/16/2023 18:48:06</publishTime>

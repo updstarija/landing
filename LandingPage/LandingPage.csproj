@@ -186,6 +186,7 @@
     <Content Include="Content\img\carrucel\carrucel1.jpg" />
     <Content Include="Content\img\carrucel\carrucel2.jpg" />
     <Content Include="Content\img\carrucel\carrucel3.jpg" />
+    <Content Include="Content\img\icon\updstarija.png" />
     <Content Include="Content\img\icon\botones flotantes\flecha.svg" />
     <Content Include="Content\img\icon\botones flotantes\pregunta.svg" />
     <Content Include="Content\img\icon\botones flotantes\tour.svg" />
@@ -207,12 +208,12 @@
     <Content Include="Content\img\testimonios\MATIAS MIRANDA.JPG" />
     <Content Include="Content\img\testimonios\RENATA UZQUEDA.JPG" />
     <Content Include="Content\img\undraw_welcome_cats_thqn.svg" />
-    <Content Include="Content\img\Ventajas\1 MATERIA.png" />
-    <Content Include="Content\img\Ventajas\CRISCOS.png" />
-    <Content Include="Content\img\Ventajas\DOCENTES.png" />
-    <Content Include="Content\img\Ventajas\FER.jpg" />
-    <Content Include="Content\img\Ventajas\HORARIOS.png" />
-    <Content Include="Content\img\Ventajas\INFRAESTRUCTURA.png" />
+    <Content Include="Content\img\ventajas\criscos.svg" />
+    <Content Include="Content\img\ventajas\docentes.svg" />
+    <Content Include="Content\img\ventajas\FER.jpg" />
+    <Content Include="Content\img\ventajas\horarios.svg" />
+    <Content Include="Content\img\ventajas\infraestructura.svg" />
+    <Content Include="Content\img\ventajas\materia.svg" />
     <Content Include="Content\js\all.min.js" />
     <Content Include="Content\js\main.js" />
     <Content Include="Content\lib\animate\animate.css" />
